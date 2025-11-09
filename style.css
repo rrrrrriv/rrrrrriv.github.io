@@ -1,0 +1,116 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@400;700&display=swap');
+:root {
+    --glow-color: #ffffff;
+}
+body {
+    background-color: #000000;
+    color: var(--glow-color);
+    font-family: 'Source Code Pro', monospace;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+    text-shadow: 
+        0 0 5px rgba(255, 255, 255, 0.8),
+        0 0 10px rgba(255, 255, 255, 0.555);
+}
+body::after {
+    content: " ";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: repeating-linear-gradient(
+        0deg,
+        rgba(0, 0, 0, 0) 0px,
+        rgba(0, 0, 0, 0.3) 1px,
+        rgba(0, 0, 0, 0) 2px
+    );
+    pointer-events: none;
+}
+.main-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    max-width: 900px;
+    width: 100%;
+    background-color: #000000;
+    padding: 40px;
+    border: 0px solid var(--glow-color);
+    box-shadow: 0 0 0px var(--glow-color);
+    border-radius: 0;
+}
+@media (max-width: 768px) {
+    .main-grid {
+        grid-template-columns: 1fr;
+    }
+}
+.left-column {
+    text-align: center;
+}
+h1 {
+    font-size: 2em;
+    color: #fff;
+    text-shadow: 0 0 10px var(--glow-color);
+}
+.links {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+.link {
+    background-color: #000000;
+    color: var(--glow-color);
+    text-decoration: none;
+    padding: 15px;
+    border: 0px solid var(--glow-color);
+    border-radius: 0;
+    transition: background-color 0
+}
+.lastfm-track a {
+    color: inherit;
+    text-decoration: underline;
+    font-weight: bold;
+    transition: color 0.2s;
+}
+.lastfm-track a:hover {
+    color: #fff;
+    text-decoration: none;
+}
+.soundcloud-embed iframe {
+    border: 1px solid var(--glow-color);
+    border-radius: 25px;
+    box-shadow: 0 0 10px var(--glow-color);
+}
+.lastfm-track {
+    background-color: #000000;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 0px dashed rgba(255, 255, 255, 0.4);
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+.lastfm-art {
+    width: 50px;
+    height: 50px;
+    border-radius: 8px;
+    object-fit: cover;   
+    border: 0px solid var(--glow-color);
+}
+.lastfm-art-placeholder {
+    width: 50px;
+    height: 50px;
+    border-radius: 8px;
+    border: 0px dashed rgba(255, 255, 255, 0.4);
+    flex-shrink: 0; 
+}
+.lastfm-info p {
+    margin: 0;
+    padding: 0;
+
+}
