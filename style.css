@@ -82,9 +82,9 @@ h1 {
     text-decoration: none;
 }
 .soundcloud-embed iframe {
-    border: 1px solid var(--glow-color);
+    border: 0px solid var(--glow-color);
     border-radius: 25px;
-    box-shadow: 0 0 10px var(--glow-color);
+    box-shadow: 0 0 0px var(--glow-color);
 }
 .lastfm-track {
     background-color: #000000;
@@ -114,3 +114,4 @@ h1 {
     padding: 0;
 
 }
+
